@@ -1,7 +1,7 @@
 $key = "xxxxxx"
-$Email = "owner@email.com"
-$Zone = "example.com"
-$Record = "subdomain"
+$email = "owner@email.com"
+$zone = "example.com"
+$record = "subdomain"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 	if ($record) {
@@ -27,7 +27,7 @@ $Record = "subdomain"
 	Write-Output "External IP is $ipaddr"
 	
 	Write-Output "Getting Zone information from CloudFlare"
-	$baseurl = "https://api.cloudflare.com/client/v4/zones/"
+	$baseurl = "https://api.cloudflare.com/client/v4/zones"
 	$zoneurl = "$($baseurl)?name=$zone"
 
 	try { 
